@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Cocktail recipes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="index.css">
-  </head>
-  <body>
+<html lang="nl">
 
-    <header>
-<h1>COCKTAIL RECIPES</h1>
-    </header>
-    <main>
-      <section>
-        <h2>Sort by:</h2>
-        <h3>Taste:</h3>
-        <label><input type="radio" name="sortBy" value="Acrid" checked>Acrid</label>
-        <label><input type="radio" name="sortBy" value="Alcohol-free">Alcohol-free</label>
-        <label><input type="radio" name="sortBy" value="Fruity">Fruity</label>
-        <label><input type="radio" name="sortBy" value="Savory">Savory</label>
-        <label><input type="radio" name="sortBy" value="Sour">Sour</label>
-        <label><input type="radio" name="sortBy" value="Sweet">Sweet</label>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <title>Document</title>
+</head>
 
-       <div class="difficulty">
-        <h3>Difficulty:</h3>
-        <div id="Difficulty">
-          <label><input type="radio" name="Difficulty" value="Easy" checked >Easy</label>
-          <label><input type="radio" name="Difficulty" value="Medium">Medium</label>
-          <label><input type="radio" name="Difficulty" value="Hard">Hard</label>
-        </div>
-      
-        <h2>ENJOY!</h2>
+<body>
+  <header>
+    <h1>COCKTAIL RECIPES</h1>
+  </header>
+
+  <main>
+    <h2>Sort by:</h2>
+    <section>
+      <div class="form">
+        <form>
+          <h3>Taste:</h3>
+          <label><input type="radio" name="sortBy" value="Acrid" checked>Acrid</label>
+          <label><input type="radio" name="sortBy" value="Alcohol-free">Alcohol-free</label>
+          <label><input type="radio" name="sortBy" value="Fruity">Fruity</label>
+          <label><input type="radio" name="sortBy" value="Savory">Savory</label>
+          <label><input type="radio" name="sortBy" value="Sour">Sour</label>
+          <label><input type="radio" name="sortBy" value="Sweet">Sweet</label>
+        </form>
       </div>
 
-        
-      </section>
-      <section id="content_section">
-      </section>
-    </main>
-    <script type="module" src="./interface/index.js"></script>
-  </body>
+        <form>
+          <h3>Difficulty:</h3>
+          <label><input type="radio" name="Difficulty" value="Easy" checked>Easy</label>
+          <label><input type="radio" name="Difficulty" value="Medium">Medium</label>
+          <label><input type="radio" name="Difficulty" value="Hard">Hard</label>
+        </form>
+      </div>
+      <h2>ENJOY!</h2>
+    </section>
+
+
+    <section id="result">
+
+    </section>
+
+
+
+  </main>
+  <script type="module" src="index.js"></script>
+</body>
+
 </html>
