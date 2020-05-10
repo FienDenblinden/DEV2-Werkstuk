@@ -5,70 +5,66 @@
 
 body {
   font-family: sans-serif;
+  background-image: url('image/melon.jpg');
+  background-size: cover;
 }
 
 header {
-  background-color: #75B09C;
+
   width: 100%;
   text-align: center;
 }
 
 header h1 {
-  color: #D8F793;
+  color: black;
+  background-color: rgba(248, 248, 255, 0.562);
   padding: 20px;
 }
 
-main {
-  margin-top: 100px;
-  overflow: auto;
+#myForm,
+#list {
+  text-align: center;
+  margin: 80px;
+
 }
 
-section {
-  background-color: #A0CA92;
-  width: 100%;
-  overflow: auto;
+#list select {
+  color: black;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
 }
 
-.form {
-  margin: auto;
-  width: 80%;
-  overflow: auto;
-  overflow-x: hidden;
+#list select+input {
+  background-color: #75B09C;
+  color: white;
+  height: 30px;
+  border: none;
+  width: 100px;
+  margin-left: 20px;
+  padding-left: 0px;
+}
+
+#myForm input {
+  color: black;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+#myForm input+input {
+  background-color: #75B09C;
+  color: white;
+  height: 30px;
+  border: none;
+  width: 100px;
+  margin-left: 20px;
+  padding-left: 0px;
+
 }
 
 h2 {
-  color: #5B4C27;
-  background-color: #A0CA92;
-  width: 110px;
-  padding: 5px 0px 0px 15px;
-}
-
-section h2 {
-  width: 100%;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
   text-align: center;
-}
 
 
-div form {
-  margin-top: 100px;
-  float: left;
-  width: 50%;
-}
-
-label {
-  display: block;
-  margin: 10px;
-}
-
-h3 {
-  color: #5B4C27;
-}
-
-section+section {
-  background-color: black;
-  height: 200px;
-  width: 100%;
 }

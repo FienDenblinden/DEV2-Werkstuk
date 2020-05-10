@@ -14,37 +14,22 @@
   </header>
 
   <main>
-    <h2>Sort by:</h2>
-    <section>
-      <div class="form">
-        <form>
-          <h3>Taste:</h3>
-          <label><input type="radio" name="sortBy" value="Acrid" checked>Acrid</label>
-          <label><input type="radio" name="sortBy" value="Alcohol-free">Alcohol-free</label>
-          <label><input type="radio" name="sortBy" value="Fruity">Fruity</label>
-          <label><input type="radio" name="sortBy" value="Savory">Savory</label>
-          <label><input type="radio" name="sortBy" value="Sour">Sour</label>
-          <label><input type="radio" name="sortBy" value="Sweet">Sweet</label>
-        </form>
+    <form id="list">
+      <select id="cocktails">
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+    <form id="myForm">
+      <input type="text" id="search" name="search" placeholder="Search...">
+      <input type="submit" value="Submit">
+    </form>
 
-        <form>
-          <h3>Difficulty:</h3>
-          <label><input type="radio" name="Difficulty" value="Easy" checked>Easy</label>
-          <label><input type="radio" name="Difficulty" value="Medium">Medium</label>
-          <label><input type="radio" name="Difficulty" value="Hard">Hard</label>
-        </form>
-      </div>
-      <h2>ENJOY!</h2>
-    </section>
-
-
-    <section id="result">
-
-    </section>
-
-
+    <h2>Result:</h2>
+    <canvas id=""></canvas>
 
   </main>
+
+
   <script type="module" src="index.js"></script>
 </body>
 
