@@ -1,5 +1,33 @@
 "use strict";
 
+class Firebase {
+    constructor() {
+        this.db = firebase.firestore();
+        this.collection = this.db.collection("Collectie");
+    }
+    convertQuerySnapshotToRegularArray = (querySnapshot) => querySnapshot.docs.map((item) => ({
+        id: item.id,
+        ...item.data()
+    }));
+
+    async render() {
+        this.nameCocktail.onSnapshot((querySnapshot) => {
+            // = this.convertQuerySnapshotToRegularArray(querySnapshot);
+
+        })
+    }
+
+    firebaseCollection() {
+        this.nameCocktail.add({
+            nameCocktail: "",
+            imageCocktail: "",
+        });
+    }
+}
+
+// Inspiratie gehaald uit werkcollege over firebase
+
+
 class Cocktail {
     constructor(htmlElement) {
         this.drinks = [];
@@ -30,6 +58,7 @@ class Cocktail {
     }
     htmlInladen() {
 
+        console.log("fotos", this.strDrinkThumb);
         // console.log(this.element);
 
     }
@@ -39,6 +68,8 @@ class Cocktail {
 class Lijst {
     constructor(drink) {
         this.strDrink = drink.strDrink;
+        this.strDrinkThumb = drink.strDrinkThumb;
+
     }
 }
 
@@ -46,3 +77,6 @@ class Lijst {
 
 const cocktailWeergeven = new Cocktail();
 console.log(cocktailWeergeven.init());
+
+const firebase = new Firebase();
+console.log("firebase test",firebase);
