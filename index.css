@@ -65,6 +65,9 @@ header h1 {
 
 h2 {
   text-align: center;
-
+  background-color: rgba(248, 248, 255, 0.562);
+width: 130px;
+margin: auto;
+padding: 10px;
 
 }
