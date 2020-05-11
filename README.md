@@ -19,3 +19,4 @@ werkcollege 2, 7 en 8
 
 LINK NAAR NETLIFY:
 
+https://werkstuk-fien-denblinden.netlify.app/
