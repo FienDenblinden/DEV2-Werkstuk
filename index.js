@@ -1,31 +1,35 @@
 "use strict";
 
+
 class Firebase {
-    constructor() {
-        this.db = firebase.firestore();
-        this.collection = this.db.collection("Collectie");
-    }
-    convertQuerySnapshotToRegularArray = (querySnapshot) => querySnapshot.docs.map((item) => ({
-        id: item.id,
-        ...item.data()
-    }));
-
-    async render() {
-        this.nameCocktail.onSnapshot((querySnapshot) => {
-            // = this.convertQuerySnapshotToRegularArray(querySnapshot);
-
-        })
-    }
-
-    firebaseCollection() {
-        this.nameCocktail.add({
-            nameCocktail: "",
-            imageCocktail: "",
+    constructor(apiKey, projectId) {
+        firebase.initializeApp({
+            apiKey,
+            projectId,
         });
+        this.database = firebase.firestore();
+        this.fileStorage = firebase.storage().ref();
+    }
+    convertQuerySnapshotToRegularArray(querySnapshot) {
+        return querySnapshot.docs.map((item) => ({
+            id: item.id,
+            ...item.data()
+        }));
     }
 }
-
-// Inspiratie gehaald uit werkcollege over firebase
+// Your web app's Firebase configuration
+let firebaseConfig = {
+    apiKey: "AIzaSyBLQd845Nh1sD0XvwMzesC4-ct0ZujOM_U",
+    authDomain: "dev2-werkstuk-da5d0.firebaseapp.com",
+    databaseURL: "https://dev2-werkstuk-da5d0.firebaseio.com",
+    projectId: "dev2-werkstuk-da5d0",
+    storageBucket: "dev2-werkstuk-da5d0.appspot.com",
+    messagingSenderId: "325667458532",
+    appId: "1:325667458532:web:4166537645db05448d8bf1",
+    measurementId: "G-MBLG3JCJSS"
+};
+// Initialize Firebase
+// Inspiratie gehaald uit werkcollege over firebase + google
 
 
 class Cocktail {
@@ -75,8 +79,10 @@ class Lijst {
 
 
 
+
+
 const cocktailWeergeven = new Cocktail();
 console.log(cocktailWeergeven.init());
 
-const firebase = new Firebase();
-console.log("firebase test",firebase);
+// const firebase = new Firebase();
+// console.log("firebase test", firebase);
